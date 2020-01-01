@@ -6,4 +6,9 @@
 @import "mixins/vendor_prefix";
 @import "modules/side_bar";
 @import "modules/chat";
+@import "modules/user";
 @import "messages/messages.scss";
+
+// colors.scssとflash.scssをインポート
+@import "config/colors";
+@import "modules/flash";
