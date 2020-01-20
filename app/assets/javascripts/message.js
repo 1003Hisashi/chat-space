@@ -1,7 +1,8 @@
 $(function(){ 
 
   function buildHTML(message){
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; //三項演算子を使ってmessage.imageにtrueならHTML要素、faiseなら空の値を代入。
+    var image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; //三項演算子を使ってmessage.imageにtrueならHTML要素、faiseなら空の値を代入。
+
     var html =`<div class="message" data-message-id="${message.id}">
           <div class="upper-message">
             <div class="upper-message__user-name">
@@ -44,9 +45,6 @@ $(function(){
           $.each(messages,function(i,message){
             insertHTML += buildHTML(message)
           });
-          $('.messages').append(insertHTML);
-          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
-          $("#new_message")[0].reset();
         }
       })
       .fail(function(){
