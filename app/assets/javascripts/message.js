@@ -8,7 +8,7 @@ $(function(){
               ${message.user_name}
             </div>
             <div class="upper-message__date">
-              ${message.date}
+              ${message.created_at}
             </div>
           </div>
           <div class="lower-message">
@@ -47,7 +47,6 @@ $(function(){
           $('.messages').append(insertHTML);
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
           $("#new_message")[0].reset();
-          $(".form__submit").prop("disabled", false);
         }
       })
       .fail(function(){
