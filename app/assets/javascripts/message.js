@@ -21,7 +21,6 @@ $(function(){
     return html;
   }
 
-  })
   //自動更新
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){//今いるページのリンクが/groups/グループID/messagesのパスとマッチすれば以下を実行。
@@ -52,10 +51,9 @@ $(function(){
         }
       })
       .fail(function(){
-        alert('自動更新に失敗しました');
+        alert('メッセージ送信に失敗しました');
       });
-    }
-  };
+    };
+  }
   setInterval(reloadMessages, 7000);
-  });
 });
